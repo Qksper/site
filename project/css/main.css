@@ -1,0 +1,329 @@
+* {
+    box-sizing: border-box;
+}
+/*говорит что размер блока который задан включает
+в себя всё от края рамки до края*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;   
+    color: #000000;     
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1140px; /* для телефона */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.none {
+    display: none !important; /* none - скрывает класс( шапку ) где прописан с классом */
+}
+
+/* header - стили заголовка */
+.header {
+    position: relative;
+    /* отпределяем модель flexbox для класса .header */
+    display: flex;
+    flex-direction: column; /* выравниваем flex элементы по оси - Y */
+    justify-content: center; /* выравнивание по основной оси (y)  */
+    align-items: center; /* выравнивание по поперечной оси (x) */
+
+    width: 100%;
+    height: 100vh;
+    /*background-color: #536681;*/
+    /*background-image: url('./../img/header/header-bg.jpg.jpg');*/   /* ./ - это текущая дериктория,
+    ../ - выход наверх */
+    background-size: cover; /* размер данного фонового изобр, cover - полностью заполнит блок
+    чтобы сохранялось маштабирование, небыло пустых областей */
+    background-position: center;
+}
+
+
+.header-title {
+    margin: 0; /* края */
+    margin-bottom: 25px; /* отступ вниз */
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 130%;
+    /* or 73px */
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+.header-subtitle {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    text-align: center;
+    letter-spacing: 0.2em; /* расстояние мжду буквами */
+    text-transform: uppercase; /* Отвечает за верхний регистр */
+    color: #FFFFFF;
+}
+
+        
+.header-arrow {    
+    width: 48px;
+    height: 48px;    
+    position: absolute; /* поверх всего */
+    bottom: 30px; /* вниз */
+    left: 50%;
+    transform: translate(-50%, 0);
+}    
+
+/* portfolio */ 
+.portfolio {
+    padding-top: 80px; /* внутренние отступы от слов(других контейнеров) -- сверху */
+    padding-bottom: 115px; /* отступ снизу -- от другого контейнера */
+}
+
+.portfolio-header {
+    margin: 0; /*убирает отступы*/
+    margin-bottom: 70px; /*добавляет отступ снизу*/
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 130%;
+    text-align: center;
+    color: #000000;
+
+}
+
+.portfolio-cards-wrapper {
+    display: flex; /* карточки выстраиваются в один ряд, но не переносятся */
+    flex-wrap: wrap; /* перенос на следующую строчку, если нету места */
+    justify-content: space-between;
+}
+
+.card {
+    margin-bottom: 30px; /* отступы от других блоков(картинок) */
+    /*---padding: 20px;---*/      /* отстьуп со всех сторон на 20 */ /* размер контейнера вырос:
+    по умолчанию в блочной модели
+    ширина которую указывают это подразумевается ширина контента внутри блока,
+    она не выключает в себя внутр отступы (падинктоны) и рамку */
+    max-width: 540px;
+    background-color: white;
+    box-sizing: border-box; /*говорит что размер блока который задан включает
+    в себя всё от края рамки до края*/
+    box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.40); /* задаём тени блокам */
+    transition: transform 0.2s ease-in /*плавные переходы для transform*/
+}
+
+.card:hover {
+    transform: translateY(-15px); /*делаем реакцию блока(поднятие в верх)*/
+}
+
+.card-link {
+    text-decoration: none; /*убрали подчёркиванием через класс в индексе*/
+    display: block; /*выделяем ссылку во всю карточку(блок форест)*/
+    color:#000000;
+    padding: 20px;
+    transition: color 0.2s ease-in; /*плавные переходы для color(чтобы вместе с блоком плавно)*/
+}
+
+/*ховерим -- подсветка при наведении(реагирование)*/
+.card-link:hover {
+    color: rgb(39, 91, 236)
+}
+
+/* обращаемся к последнему блоку класса(контейнера) - card(картинке) c помощью псевдо-селектора */
+.card:last-child, .card:nth-last-child(2) {
+    margin-bottom: 0;
+}
+    /*обнуление нижнего отступа*/
+
+
+/* выбирает элемент по номеру с конца */
+.card:nth-last-child(2) {
+    margin-bottom: 0;
+}
+ 
+.card-img {
+    margin-bottom: 20px;
+}
+
+.card-title {
+    margin: 0;
+    margin-bottom: 13px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.3;
+    /* or 31px */
+}
+
+.card p {   /* P -- означает, что мы стерелизуем все 'p' в классе */
+    margin: 0;
+    font-size: 16px;
+    line-height: 130%;
+    /* identical to box height, or 21px */    
+}
+
+/* footer */
+.footer {
+    background: #1E4776; /* без падингов или высоты невиден, потому что увеличивается за счёт контента */
+    padding-top: 45px; 
+    padding-bottom: 130px;
+    color: white;
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /*джистифай выравнивание по основной оси Х,
+    спэйс-битвин это как элементы выравниваются*/
+}
+
+.footer-col {
+    flex-grow: 1;
+    max-width: 350px;
+}
+
+.footer-copiright {    
+    color: #7E9EC9;
+    line-height: 1.3;    
+}
+
+.footer-copiright-name {
+    font-weight: 700;
+    font-size: 28px;    
+    /* or 21px */
+    margin-bottom: 15px;
+}
+
+.footer-copiright p{
+    /*стерелизуем тег -р- в отдельно в классе*/    
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+
+
+.foooter-icons p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.3;
+    /* identical to box height, or 21px */
+}
+
+.footer-icons-row {
+    display: flex;
+    align-items: center; /*выравнивание по цетру*/
+
+}
+/*вибираем все теги, внутри блока icons-row, */
+/*селектор - + - говорит что мы выбираем элементы которые находятся на первом уровне вложенности,
+а плюс говорит что мы выбираем соседы от ссылки которую выбрали*/
+.footer-icons-row > * + * {
+    margin-left: 30px;
+}
+
+
+
+.footer-contacts p {
+    margin: 15px 0;
+    font-size: 16px;
+    line-height: 1.3;
+    /* or 21px */
+    color: #7E9EC9;
+}
+
+.footer-button {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 50px;
+
+    border: 3px solid white;
+    border-radius: 50px;
+
+      
+    color: white;
+    line-height: 44px;
+    font-weight: 700;
+    font-size: 16px;    
+    /* identical to box height, or 21px */
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+}
+
+.footer-button:hover {
+    background-color: white;
+    color: #1E4774;
+}
+
+/*project*/
+.project {
+    /*padding-top: 80px;
+    padding-bottom: 120px;*/
+    padding: 80px 0 120px 0; /*сокращение top- and -bottom*/
+    text-align: center;
+}
+
+.project-header {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 1.3;
+    /* identical to box height, or 60px */  
+}
+
+.project-img {
+    margin-bottom: 70px;
+}
+
+.project-description {
+    margin: 0 auto 60px; /*сокращение bottom"a*/
+    max-width: 730px;
+    /*margin-bottom: 60px;*/
+}
+
+.project-description p {
+    margin-top: 0;
+    margin-bottom: 15px;    
+    font-size: 16px;
+    line-height: 1.5;
+    /* or 24px */ 
+}
+
+.project-btn-back {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 60px;
+
+    border: 3px solid #275BEC;
+    border-radius: 50px;
+
+      
+    color: #275BEC;
+    line-height: 54px; /*чтобы вычислить (для ровного теста(середина)) нужно из высоты два раза вычесть border*/
+    font-weight: 700;
+    font-size: 16px;    
+    /* identical to box height, or 21px */
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s ease-in;/*для всех свойств ВЫШЕ КОТОРЫЕ ховерим(анимируем)*/
+}
+
+/*анимируем кнопку через: hOver*/
+.project-btn-back:hover {
+    background-color: #275bec;
+    color: white;    
+}
+

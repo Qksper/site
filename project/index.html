@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт Пoртфолио</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header" id="header"> <!--шапка стр-->
+        <h1 class="header-title">Тимур Березин</h1>
+        <p class="header-subtitle">веб-разработчик, создатель сайтов</p>
+        <a href="#portfolio" class="header-arrow">
+            <img src="./img/header/chevron-down.svg" alt="Arrow"> 
+        </a>   
+    </header>
+    
+    <main> <!--основной контент-->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <h2 class="portfolio-header">Портфолио</h2>
+
+                    <!-- portfolio-cards-wrapper (контейнер)-->
+                <div class="portfolio-cards-wrapper"> <!--wrapper - это оборот(en)-->
+
+                        <!-- начало блока Card -->
+                    <div class="card">
+                        <a href="forest-travel.html" class="card-link"> <!--убираем_подчёркивание (не только)-->
+                            <img class="card-img" src="./img/portfolio/forest.jpg.jpg" alt="Многостраничный сайт">
+                            <h3 class="card-title">Многостраничный сайт</h3>
+                            <p>Верстка многостраничного сайта</p>
+                        </a>
+                    </div>
+                    <!-- конец блока Card -->
+
+                    <!-- начало блока Card -->
+                    <div class="card">
+                        <a href="forest-travel.html" class="card-link"> <!--убираем_подчёркивание (не только)-->
+                            <img class="card-img" src="./img/portfolio/unit.jpg.jpg" alt="Многостраничный сайт">
+                            <h3 class="card-title">Адаптивный лендинг</h3>
+                            <p>Верстка многостраничного сайта</p>
+                        </a>
+                    </div>
+                    <!-- конец блока Card -->
+
+                    <!-- начало блока Card -->
+                    <div class="card">
+                        <a href="forest-travel.html" class="card-link"> <!--убираем_подчёркивание (не только)-->
+                            <img class="card-img" src="./img/portfolio/portfolio.jpg.jpg" alt="Многостраничный сайт">
+                            <h3 class="card-title">Личный сайт</h3>
+                            <p>Верстка многостраничного сайта</p>
+                        </a>
+                    </div>
+                    <!-- конец блока Card -->
+
+                    <!-- начало блока Card -->
+                    <div class="card">
+                        <a href="forest-travel.html" class="card-link"> <!--убираем_подчёркивание (не только)-->
+                            <img class="card-img" src="./img/portfolio/quantum.jpg.jpg" alt="Многостраничный сайт">
+                            <h3 class="card-title">Интернет магазин</h3>
+                            <p>Верстка многостраничного сайта</p>
+                        </a>
+                    </div>
+                    <!-- конец блока Card -->
+                </div> 
+                    <!-- // portfolio-cards-wrapper -->
+
+                <!-- блоки по умолчанию размещаются друг под другом -->
+            </div>             
+
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+
+                <div class="footer-copiright footer-col">
+                    <div class="footer-copiright-name">© Тимур Березин</div>
+                    <p>HTML верстка и разработка сайтов</p>
+                </div>
+
+                <div class="footer-icons footer-col">
+                    <p>Мои профили в социальных сетях:</p>
+                    <div class="footer-icons-row"> 
+                         <!-- ТЕГ -а- РИСУЕТ ССЫЛКУ-->
+                        <a href="#"> <!-- тег -href- копирует ссылку, его надо всегда заполнять (#) -->
+                        <img src="./img/icons/instagram.svg" alt="">
+                        </a>
+                        <a href="#">
+                        <img src="./img/icons/facebook.svg" alt="">
+                        </a>
+                        <a href="https://vk.com/op.timur4ik">
+                        <img src="./img/icons/vk.svg" alt="">
+                        </a>
+                        <a href="#">
+                        <img src="./img/icons/linkedin.svg" alt="">
+                        </a>
+                        <a href="#">
+                        <img src="./img/icons/github.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-contacts footer-col">
+                    <a href="https://vk.com/op.timur4ik" class="footer-button">
+                        Связаться Вконтакте
+                    </a>
+                    <p>Напишите мне, чтобы заказать или узнать стоимость верстки вашего проекта.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Библиотеки и плагины -->
+    <script src="./libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./libs/vide/jquery.vide.min.js"></script>
+
+    <!-- собственные скрипты и вызовы библиотек -->
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
